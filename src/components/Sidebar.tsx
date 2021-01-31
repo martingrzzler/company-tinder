@@ -11,7 +11,7 @@ export const Sidebar = ({ companies }: Props) => {
     const renderItems = (state: State) => {
         return companies.map(c => {
             if (c.state == state) {
-                return <Item name={c.name} />
+                return <Item key={c.id} name={c.name} />
             }
         });
     }

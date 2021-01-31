@@ -16,10 +16,10 @@ export const Import = ({ setCompanies }: Props) => {
 
         let names: string[] = [];
 
-        if(/[A-Z,a-z,1-9]+\n/g.test(data)) {
+        if(/.+\n/g.test(data)) {
             names = data.split('\n').filter(c => c != '');
         } 
-        else if(/[A-Z,a-z,1-9]+,/g.test(data)) {
+        else if(/.+,/g.test(data)) {
             names = data.split(',');
         }
         else {
