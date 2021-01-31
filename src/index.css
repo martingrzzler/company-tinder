@@ -17,15 +17,17 @@ body {
 }
 
 .main {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: minmax(min-content, 9vh) 91vh;
   font-size: 1.6rem;
+  position: relative;
 
 }
 
 .content {
-  grid-column: 2/-1;
+  width: 75%;
+  margin-left: 25%;
+  margin-top: 5%;
+  padding: 2rem;
+  overflow-x: hidden;
 }
 
 .import {
@@ -64,11 +66,11 @@ body {
 }
 
 .sidebar {
-  grid-row: 2 / -1;
-  grid-column: 1;
   box-shadow: 5px 0 5px rgba(0,0,0,0.2);
-  margin-right: 2rem;
-  margin-top: 1px;
+  position: fixed;
+  top: 10%;
+  height: 90%;
+  width: 25%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -86,16 +88,25 @@ body {
 .selected, .tossed {
   padding: 1rem;
   border-radius: 5px;
+  max-height: 50%;
+  overflow-y: scroll;
 }
 
 .tossed {
   background-color: red;
+  margin-top: 1rem;
 }
 
 .header {
-  grid-column: 1 / -1;
   text-transform: uppercase;
   padding: 2rem;
+  box-sizing: content-box;
+  position: fixed;
+  width: 100%;
+  height: 5%;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
   font-size: 4rem;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
@@ -104,7 +115,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem 0;
-  overflow-y: scroll;
 }
 
 .card {

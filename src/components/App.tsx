@@ -7,7 +7,7 @@ import { Sidebar } from './Sidebar';
 
 export const App = () => {
 
-    const [companies, setCompanies] = useState(generateCompanies(10));
+    const [companies, setCompanies] = useState(generateCompanies(100));
 
     const onChange = (id: string, state: State) => {
         const updatedCompanies = companies.map(c => {
